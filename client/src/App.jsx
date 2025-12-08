@@ -1,20 +1,24 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
-import Dashboard from "./pages/Dashboard";
-import Analyze from "./pages/Analyze";
+import CustomCursor from "./components/CustomCursor";
+import { Button } from "@/components/animate-ui/components/buttons/button";
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/analyze" element={<Analyze />} />
-      </Routes>
-    </BrowserRouter>
+    <>
+      <CustomCursor />
+
+      <div className="flex flex-col gap-6 items-center justify-center h-screen">
+        <h1 className="text-2xl font-bold">Custom Cursor Working 🎯</h1>
+
+        {/* This button auto-triggers cursor text because it's a <button> */}
+        <Button className="ui-button ui-button-primary">
+          Click Me
+        </Button>
+
+        {/* Example custom hover zone */}
+        <div className="hover-target text-lg border p-3 rounded-md">
+          Hover me
+        </div>
+      </div>
+    </>
   );
 }

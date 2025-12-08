@@ -1,0 +1,13 @@
+:root {
+  --background: 255 255 255;
+  --foreground: 0 0 0;
+  --border: 225 225 225;
+
+  --primary: 0 122 255;
+  --primary-foreground: 255 255 255;
+}
+
+html, body {
+  background: rgb(var(--background));
+  color: rgb(var(--foreground));
+}
